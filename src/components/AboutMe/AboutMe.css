@@ -1,0 +1,64 @@
+.about-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding: 5vh 5vw;
+    box-sizing: border-box;
+    min-height: 100vh;
+    cursor: default;
+}
+
+.about-main h3 {
+    margin-top: 0;
+}
+
+.about-main .list {
+    list-style: inside;
+}
+.about-main .portfolioBtn {
+    cursor: pointer;
+    border: none;
+
+    background: rgba(148, 24, 24, 0.9); /* нюд */
+    border-radius: 25px;
+
+    width: 200px;
+    height: 50px;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.about-main .portfolioBtn:hover {
+    background: rgb(131, 44, 44);
+    transform: translateY(-1px);
+}
+.about-main .portfolioBtn a {
+    position: relative;
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+}
+.about-main .portfolioBtn a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: rgba(185, 31, 31, 0.7);
+    transition: width 0.3s ease;
+}
+
+.about-main .portfolioBtn a:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .about-main {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
